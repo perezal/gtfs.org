@@ -1,0 +1,16 @@
+# Site settings
+title: GTFS.org
+email: gtfs-wg@rmi.org
+description: > # Resources for the General Transit Feed Specification
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://gtfs.org" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
