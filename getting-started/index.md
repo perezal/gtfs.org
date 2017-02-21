@@ -40,7 +40,7 @@ See also: [applications and services for creating and maintaining GTFS data](htt
 
 There are a number of mailing lists that can be good resources when you have questions about public transit data, software, formats like GTFS and GTFS-realtime, and other issues:
 
-* [GTFS Changes](https://groups.google.com/group/gtfs-changes): discussion of proposal for extending the GTFS specification, as outlined in the [GTFS Changes document](https://developers.google.com/transit/gtfs/changes).
+* [GTFS Changes](https://groups.google.com/group/gtfs-changes): discussion of proposal for extending the GTFS specification.
 * [Transit Developers](https://groups.google.com/group/transit-developers): general transit developer discussions. Many transit agencies also have their own developer mailing lists specific to the agency. For example:
   * [NYC MTA](https://groups.google.com/group/mtadeveloperresources)
   * [Portland, OR](https://groups.google.com/group/transit-developers-pdx)
