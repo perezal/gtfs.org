@@ -33,11 +33,11 @@ code {
 
 h1 {
   padding-bottom: 5px;
-  border-bottom: 2px solid $nav-color;
+  border-bottom: 2px solid $color-green;
 }
 
 p {
-  margin: 10px 0;
+  // margin: 10px 0;
   line-height: 1.3em;
 }
 
@@ -61,12 +61,7 @@ img, svg {
     margin-bottom: 0;
     padding-bottom: 50px;
 
-    p {
-      font-size: 18px;
-    }
-
     h1 {
-      font-weight: 300;
       border: none;
     }
 
