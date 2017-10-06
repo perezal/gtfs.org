@@ -1,0 +1,22 @@
+machine:
+  environment:
+    NOKOGIRI_USE_SYSTEM_LIBRARIES: true # speeds up installation of html-proofer
+
+# checkout:
+#   post:
+#     - git clone git@github.com:perezal/best-practices.git
+
+dependencies:
+  post:
+    - git clone git@github.com:perezal/gtfs-best-practices.git _best-practices/
+
+test:
+  post:
+    # - bundle exec htmlproofer ./_site --allow-hash-href --check-favicon --check-html --disable-external
+      - bundle exec jekyll build
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - rsync -va --delete ./_site/ ${WEBSERVER}:${WEBADDRESS}
