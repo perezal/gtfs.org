@@ -11,6 +11,8 @@ markdown: kramdown
 collections:
   best-practices:
     output: true
+  reference:
+    output: true
 
 exclude:
   - Gemfile

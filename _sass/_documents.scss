@@ -1,4 +1,4 @@
-#best-practices {
+.documents {
 
   .sidenav {
     background-color: #f5f5f5;
@@ -157,6 +157,19 @@
 
   #rmi-logo {
     width: 25%;
+  }
+
+  .anchor-row:hover .anchor {
+    background-color: red;
+  }
+
+  .anchor-row.active {
+    background-color: #999;
+  }
+
+  .anchor {
+    height: 20px;
+    width: 20px;
   }
 
 }
