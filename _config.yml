@@ -13,6 +13,8 @@ collections:
     output: true
   reference:
     output: true
+  realtime:
+    output: true
 
 exclude:
   - Gemfile

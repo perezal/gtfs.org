@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+    <section class="page">
+      <div id="realtime" class="documents page-content clearfix">
+        <div class="col-md-3 col-xs-12">
+          <ul class="list-group sidenav">
+            <li class="list-group-item"><a href="{{ "/realtime/" | prepend: site.baseurl }}">Terms and Requirements</a></li>
+            <li class="list-group-item">Field Definitions</li>
+            <ul>
+              <li><a href="{{ "/realtime/agency/" | prepend: site.baseurl }}">agency.txt</a></li>
+              <li><a href="{{ "/realtime/feed-info/" | prepend: site.baseurl }}">feed_info.txt</a></li>
+              <li><a href="{{ "/realtime/stops/" | prepend: site.baseurl }}">stops.txt</a></li>
+              <li><a href="{{ "/realtime/stop-times/" | prepend: site.baseurl }}">stop_times.txt</a></li>
+              <li><a href="{{ "/realtime/transfers/" | prepend: site.baseurl }}">transfers.txt</a></li>
+              <li><a href="{{ "/realtime/trips/" | prepend: site.baseurl }}">trips.txt</a></li>
+              <li><a href="{{ "/realtime/frequencies/" | prepend: site.baseurl }}">frequencies.txt</a></li>
+              <li><a href="{{ "/realtime/routes/" | prepend: site.baseurl }}">routes.txt</a></li>
+              <li><a href="{{ "/realtime/shapes/" | prepend: site.baseurl }}">shapes.txt</a></li>
+              <li><a href="{{ "/realtime/calendar/" | prepend: site.baseurl }}">calendar.txt</a></li>
+              <li><a href="{{ "/realtime/calendar-dates/" | prepend: site.baseurl }}">calendar_dates.txt</a></li>
+              <li><a href="{{ "/realtime/fare-rules/" | prepend: site.baseurl }}">fare_rules.txt</a></li>
+              <li><a href="{{ "/realtime/fare-attributes/" | prepend: site.baseurl }}">fare_attributes.txt</a></li>
+            </ul>
+          </ul>
+        </div>
+        <div class="col-lg-8 col-md-9 col-xs-12">
+          {{ content }}
+        </div>
+      </div>
+    </section> <!-- page -->
+    {% include footer.html %}
+  </body>
+</html>
