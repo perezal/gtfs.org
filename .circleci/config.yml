@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    machine: true
+      steps:
+        - checkout
+        - run: bundle install
+        - run: bundle exec jekyll build
+        - run: git clone git@github.com:rocky-mountain-institute/gtfs-best-practices.git _best-practices/
+        - run: git clone git@github.com:rocky-mountain-institute/gtfs-reference.git _reference/
+

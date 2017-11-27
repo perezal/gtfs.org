@@ -2,13 +2,10 @@ machine:
   environment:
     NOKOGIRI_USE_SYSTEM_LIBRARIES: true # speeds up installation of html-proofer
 
-# checkout:
-#   post:
-#     - git clone git@github.com:perezal/best-practices.git
-
 dependencies:
   post:
-    - git clone git@github.com:perezal/gtfs-best-practices.git _best-practices/
+    - git clone git@github.com:rocky-mountain-institute/gtfs-best-practices.git _best-practices/
+    - git clone git@github.com:rocky-mountain-institute/gtfs-reference.git _reference/
 
 test:
   post:
@@ -17,7 +14,6 @@ test:
 
 deployment:
   prod:
-    branch: gtfs-refit
+    branch: master
     commands:
-      - rsync -va --delete ./_site/ ${WEBSERVER}:${WEBADDRESS}
-      - aws s3 sync _site s3://alexperez.ninja/ --delete
+      - aws s3 sync _site s3://gtfs.org/ --delete
