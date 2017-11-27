@@ -5,7 +5,11 @@ jobs:
     steps:
       - checkout
       - run: bundle install
-      - run: bundle exec jekyll build
       - run: git clone git@github.com:rocky-mountain-institute/gtfs-best-practices.git _best-practices/
       - run: git clone git@github.com:rocky-mountain-institute/gtfs-reference.git _reference/
+      - run: bundle exec jekyll build
+  deploy:
+    steps:
+      - run: aws s3 sync _site s3://gtfs.org/ --delete
+
 
