@@ -1,0 +1,8 @@
+machine:
+  environment:
+    NOKOGIRI_USE_SYSTEM_LIBRARIES: true # speeds up installation of html-proofer
+
+test:
+  post:
+    # - bundle exec htmlproofer ./_site --allow-hash-href --check-favicon --check-html --disable-external
+      - curl -v -X POST https://circleci.com/api/v1.1/project/github/rocky-mountain-institute/gtfs.org/tree/master?circle-token=$CIRCLE_TOKEN
