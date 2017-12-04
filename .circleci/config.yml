@@ -13,8 +13,8 @@ jobs:
           command: git clone git@github.com:itd-consortium/gtfs-reference.git _reference/
       - run: bundle exec jekyll build
       - deploy:
-          name: Deploy to S3
-          command: aws s3 sync _site s3://alexperez.ninja/ --delete
-          filters:
-            branches:
-              only: master
+          name: If master, deploy to S3
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              aws s3 sync _site s3://alexperez.ninja/ --delete
+            fi
